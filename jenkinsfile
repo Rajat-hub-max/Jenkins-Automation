@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Add your build commands here, for example:
+                // sh 'npm install'   // For Node.js projects
+                // sh './gradlew build'   // For Gradle projects
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Add your test commands here
+                // sh 'npm test'   // For Node.js projects
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Add your deployment commands here
+            }
+        }
+    }
+}
